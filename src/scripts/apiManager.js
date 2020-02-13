@@ -19,6 +19,15 @@ const apiManager = {
             method: "DELETE"
             
         }).then(r=>r.json());
+    },
+    updateSpecificCard: (id, obj)=> {
+        return fetch (`${baseUrl}interests/${id}`,{
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(obj)
+        }).then(r=>r.json());
     }
     }
 export default apiManager;
