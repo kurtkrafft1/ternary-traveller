@@ -6,6 +6,11 @@ const eventsManager = {
   addLogButtonEventListener: () => {
     const logButton = document.getElementById("logButton");
     logButton.addEventListener("click", () => {
+      const select = document.getElementById('placeDropdown');
+      if(select.value === 'pleaseSelect'|| select.value===""){
+        alert('Please Select a Place')
+      } else {
+      
       const newObject = objectManager.createObjectFromForm();
 
       apiManager
@@ -16,7 +21,8 @@ const eventsManager = {
           domManager.makeMultipleCards(newArr);
         });
       objectManager.clearFormField();
-    });
+    }});
+  
   },
   loadAllCArds: () => {
     apiManager.getInterestsData().then(arr => {

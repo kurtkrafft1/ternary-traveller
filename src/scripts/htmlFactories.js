@@ -1,5 +1,6 @@
 const htmlFactoryManager = {
   makeCardHtml: (obj) => {
+
     const dollarSign = "$";
     const dollarsigns = dollarSign.repeat(obj.price);
     if (obj.review === "") {
