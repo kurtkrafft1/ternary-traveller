@@ -17,6 +17,13 @@ const eventsManager = {
       objectManager.clearFormField();
     });
   },
+  loadAllCArds: () => {
+    apiManager.getInterestsData().then(arr => {
+      const newArr = arr.reverse();
+      domManager.makeMultipleCards(newArr);
+    });
+  },  
+
   addDeleteAndEditButtonEventListener: () => {
     const cardContainer = document.getElementById("card-container");
     cardContainer.addEventListener("click", () => {
@@ -65,7 +72,8 @@ const eventsManager = {
               });
       }
     });
-  }
+  },
+  
 };
 
 export default eventsManager;

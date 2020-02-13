@@ -4,6 +4,7 @@ const htmlFactoryManager = {
     if (obj.review === "") {
       return `
       <div class="newCard" id="card-${obj.id}">
+      <legend>Place of Interest</legend>
         <h2>Place: <span id="place-${obj.id}">${obj.placeId}</span></h2>
         <h3>Region or City: <span id="region-${obj.id}">${obj.location}</span></h3>
         <h3>Description</h3
@@ -23,6 +24,7 @@ const htmlFactoryManager = {
     } else {
       return `
       <div class="newCard" id="card-${obj.id}">
+      <legend>Located</legend>
         <h2>Place: <span id="place-${obj.id}">${obj.placeId}</span></h2>
         <h3>Region or City: <span id="region-${obj.id}">${obj.location}</span></h3>
         <h3>Description</h3
