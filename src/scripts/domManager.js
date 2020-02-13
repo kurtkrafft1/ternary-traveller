@@ -5,6 +5,13 @@ const domManager = {
       const html =  htmlFactoryManager.makeCardHtml(entry);
       cardContainer.innerHTML += html;
 
+    },
+    makeMultipleCards: (arr)=> {
+        cardContainer.innerHTML=""
+        arr.forEach(obj=> {
+            const html =  htmlFactoryManager.makeCardHtml(obj);
+            cardContainer.innerHTML+= html;
+        })
     }
 }
 export default domManager;

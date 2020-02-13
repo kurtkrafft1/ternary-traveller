@@ -4,3 +4,4 @@ console.log('hey')
 
 mainDomEntries.createMainForm();
 eventsManager.addLogButtonEventListener();
+eventsManager.addDeleteAndEditButtonEventListener();
