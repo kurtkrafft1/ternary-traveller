@@ -6,7 +6,7 @@ const mainDomEntries = {
       <div>
       <label for="placeDropdown">Where are you going:</label>
       <select id="placeDropdown" name="placeDropdown">
-        <option value="pleaseSelect" disabled>--Please Select an option--</option>
+        <option value="pleaseSelect" selected="selected" disabled>--Please Select an option--</option>
         <option value="1">Italy</option>
         <option value="2">Switzerland</option>
         <option value="3">France</option>
@@ -27,6 +27,9 @@ const mainDomEntries = {
       <div>
       <label for="reviewSection">Review: </label>
       <textarea rows='4' cols="10" id="reviewSection" name="reviewSection" placeholder="Review goes here..."></textarea>
+      </div>
+      <div>
+      <button type="button" id="logButton">Log Post</button>
       </div>
       </div>
       `
