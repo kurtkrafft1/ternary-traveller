@@ -3,8 +3,8 @@ const mainDomEntries = {
     createMainForm: () => {
       const html = `
       <div class="form">
-      <div>
-      <label for="placeDropdown">Where are you going:</label>
+      <div class="q">
+      <label for="placeDropdown">Where are you going:&nbsp;</label>
       <select id="placeDropdown" name="placeDropdown">
         <option value="pleaseSelect" selected="selected" disabled>--Please Select an option--</option>
         <option value="1">Italy</option>
@@ -12,23 +12,24 @@ const mainDomEntries = {
         <option value="3">France</option>
       </select>
       </div>
-      <div>
-      <label for="location">Any Particular region you're planning on travelling to: </label>
+      <div class="q">
+      <label for="location">Any Particular region you're planning on travelling to:&nbsp; </label>
       <input type="text" name="location" id="location" placeholder="text goes here">
       </div>
-      <div>
-      <label for="locationDescription">Location Description: </label>
-      <textarea rows='4' cols="10" name="locationDescription" id="locationDescription" placeholder="entry goes here"></textarea>
+      <div class="q">
+      <label for="locationDescription">Location Description:&nbsp; </label>
+      <textarea rows='2' cols="30" name="locationDescription" id="locationDescription" placeholder="entry goes here"></textarea>
       </div>
-      <div>
-      <label for="cost">Price: </label>
-      <input name = "cost" type="range" min="1" max="5" value="50" class="slider" id="priceRange">
+      <div class="q">
+      <label for="cost">Price: &nbsp;</label>
+      <input name = "cost" type="range" min="1" max="5" class="slider" id="priceRange">
+     <div id="dollarSigns">$$$</div>
       </div>
-      <div>
-      <label for="reviewSection">Review: </label>
-      <textarea rows='4' cols="10" id="reviewSection" name="reviewSection" placeholder="Review goes here..."></textarea>
+      <div class="q">
+      <label for="reviewSection">Review:&nbsp; </label>
+      <textarea rows='2' cols="30" id="reviewSection" name="reviewSection" placeholder="Review goes here..."></textarea>
       </div>
-      <div>
+      <div class="q">
       <button type="button" id="logButton">Log Post</button>
       </div>
       </div>

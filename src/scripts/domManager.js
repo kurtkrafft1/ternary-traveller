@@ -11,6 +11,7 @@ const domManager = {
     makeMultipleCards: (arr)=> {
         cardContainer.innerHTML=""
         arr.forEach(obj=> {
+ 
             const html =  htmlFactoryManager.makeCardHtml(obj);
             cardContainer.innerHTML+= html;
         })
@@ -20,6 +21,20 @@ const domManager = {
      const html = mainDomEntries.editCardFormHtml(obj);
      card.innerHTML = html;
 
+    },
+    dollarSignCreater:(value) => {
+        const dollarSigns = document.getElementById('dollarSigns');
+      if(value==="1"){
+          dollarSigns.innerHTML = '$'
+      } else if (value==="2"){
+        dollarSigns.innerHTML = '$$'
+      }else if (value==="3"){
+        dollarSigns.innerHTML = '$$$'
+      } else if (value==="4"){
+        dollarSigns.innerHTML = '$$$$'
+      }else if (value==="5"){
+        dollarSigns.innerHTML = '$$$$$'
+      }
     }
 }
 export default domManager;

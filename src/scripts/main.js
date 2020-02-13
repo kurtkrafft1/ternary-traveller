@@ -4,5 +4,6 @@ console.log('hey')
 
 mainDomEntries.createMainForm();
 eventsManager.addLogButtonEventListener();
+eventsManager.priceRangeListener();;
 eventsManager.loadAllCArds();
 eventsManager.addDeleteAndEditButtonEventListener();
