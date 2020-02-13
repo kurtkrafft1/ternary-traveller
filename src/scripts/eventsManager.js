@@ -7,11 +7,12 @@ const eventsManager = {
     const logButton = document.getElementById("logButton");
     logButton.addEventListener("click", () => {
       const newObject = objectManager.createObjectFromForm();
+
       apiManager
         .postInterestData(newObject)
         .then(apiManager.getInterestsData)
         .then(arr => {
-            const newArr = arr.reverse()
+          const newArr = arr.reverse();
           domManager.makeMultipleCards(newArr);
         });
       objectManager.clearFormField();
@@ -22,7 +23,7 @@ const eventsManager = {
       const newArr = arr.reverse();
       domManager.makeMultipleCards(newArr);
     });
-  },  
+  },
 
   addDeleteAndEditButtonEventListener: () => {
     const cardContainer = document.getElementById("card-container");
@@ -43,37 +44,42 @@ const eventsManager = {
           alert("Okay, it stays!");
         }
       } else if (event.target.id.split("-")[0] === "edit") {
-          const id = event.target.id.split('-')[1];
-        const place = document.getElementById(`place-${id}`)
-        const region = document.getElementById(`region-${id}`)
-        const description = document.getElementById(`description-${id}`)
-        const price = document.getElementById(`price-${id}`)
-        const review = document.getElementById(`review-${id}`)
+        const id = event.target.id.split("-")[1];
+        const place = document.getElementById(`place-${id}`);
+        const region = document.getElementById(`region-${id}`);
+        const description = document.getElementById(`description-${id}`);
+        const price = document.getElementById(`price-${id}`);
+        const review = document.getElementById(`review-${id}`);
         const cardObj = {
-            "id": id,
-            "placeId":Number(place.innerHTML),
-            "location": region.innerHTML,
-            "locationDescription": description.innerHTML,
-            "price": Number(price.innerHTML),
-            "review":review.innerHTML,
-
-
-        }
+          id: id,
+          placeId: Number(place.value),
+          location: region.innerHTML,
+          locationDescription: description.innerHTML,
+          price: Number(price.value),
+          review: review.innerHTML
+        };
         // console.log(cardObj);
         domManager.changeCardToForm(id, cardObj);
-      } else if (event.target.id.split('-')[0]==='submit'){
-          const id= event.target.id.split('-')[1];
-          const updatedObject = objectManager.createUpdatedObject(id)
-          apiManager.updateSpecificCard(id, updatedObject)
-            .then(apiManager.getInterestsData)
-            .then(arr => {
-                const newArr = arr.reverse();
-                domManager.makeMultipleCards(newArr);
-              });
+      } else if (event.target.id.split("-")[0] === "submit") {
+        const id = event.target.id.split("-")[1];
+        const updatedObject = objectManager.createUpdatedObject(id);
+        apiManager
+          .updateSpecificCard(id, updatedObject)
+          .then(apiManager.getInterestsData)
+          .then(arr => {
+            const newArr = arr.reverse();
+            domManager.makeMultipleCards(newArr);
+          });
       }
     });
   },
-  
+
+  priceRangeListener: () => {
+    const pricerange = document.getElementById("priceRange");
+    pricerange.addEventListener("mouseup", () => {
+      domManager.dollarSignCreater(event.target.value);
+    });
+  }
 };
 
 export default eventsManager;

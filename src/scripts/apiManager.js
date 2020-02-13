@@ -1,7 +1,7 @@
 const baseUrl = "http://localhost:8088/"
 const apiManager = {
     getInterestsData: () => {
-      return fetch (`${baseUrl}interests`)
+      return fetch (`${baseUrl}interests?_expand=place`)
       .then(r=>r.json());
     },
     postInterestData: (entry) => {
