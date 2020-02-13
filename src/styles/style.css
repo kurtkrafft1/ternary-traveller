@@ -51,13 +51,16 @@ li {
   flex-direction: column;
   padding: 2%;
   margin: 3%;
-  background-color: white;
+  background-color: var(--mid-yellow);
+  color: white;
   color: var(--dark--af);
   transition: 0.3s ease;
   font-size: 20px;
+  
 }
 .newCard:hover {
-  width: 22%;
+  width: 21%;
+  box-shadow:30px 30px ;
   transition: 0.3s ease;
 }
 .carousel {
@@ -79,7 +82,16 @@ li {
   letter-spacing: 2px;
   text-shadow: 1px 1px black;
 }
+fieldset{
+    background-color: white;
+}
+legend {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
 
+}
 
 .form {
   display: flex;
@@ -132,6 +144,38 @@ button {
 button:hover {
   background-color: var(--primary-color);
   color: var(--dark-accent-blue);
-  padding: 2.5%;
   transition: 0.3s ease;
+}
+.edit-form  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.e {
+    margin: 5%;
+}
+
+button.submitBtn {
+    padding: 5%;
+    align-self: center;
+    
+}
+
+footer {
+    background-color: var(--dark--af);
+    height: 200px;
+}
+.bottomLinks {
+    display: flex;
+    width: 100%;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    font-size: 40px;
+}
+.b {
+    margin-top: 5%;
+    color: grey;
+}
+a:link {
+    color: grey;
 }
