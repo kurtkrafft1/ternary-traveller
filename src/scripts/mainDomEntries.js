@@ -5,7 +5,7 @@ const mainDomEntries = {
       <div class="form">
       <div class="q">
       <label for="placeDropdown">Where are you going:&nbsp;</label>
-      <select id="placeDropdown" name="placeDropdown">
+      <select id="placeDropdown" name="placeDropdown" required>
         <option value="pleaseSelect" selected="selected" disabled>--Please Select an option--</option>
         <option value="1">Italy</option>
         <option value="2">Switzerland</option>
@@ -25,10 +25,7 @@ const mainDomEntries = {
       <input name = "cost" type="range" min="1" max="5" class="slider" id="priceRange">
      <div id="dollarSigns">$$$</div>
       </div>
-      <div class="q">
-      <label for="reviewSection">Review:&nbsp; </label>
-      <textarea rows='2' cols="30" id="reviewSection" name="reviewSection" placeholder="Review goes here..."></textarea>
-      </div>
+      <input type="hidden" id="reviewSection" name="reviewSection">
       <div class="q">
       <button type="button" id="logButton">Log Post</button>
       </div>
