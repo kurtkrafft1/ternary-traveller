@@ -39,7 +39,8 @@ const mainDomEntries = {
 
         if(obj.placeId === 1){
             return `
-            <div>
+            <div class="edit-form">
+            <div  class="e">
       <label for="placeDropdown">Where are you going:</label>
       <select id="placeDropdown-${obj.id}" name="placeDropdown">
         <option value="pleaseSelect"disabled>--Please Select an option--</option>
@@ -48,29 +49,30 @@ const mainDomEntries = {
         <option value="3">France</option>
       </select>
       </div>
-      <div>
+      <div class="e">
       <label for="location">Any Particular region you're planning on travelling to: </label>
       <input type="text" name="location" id="location-${obj.id}" value="${obj.location}">
       </div>
-      <div>
+      <div class="e">
       <label for="locationDescription">Location Description: </label>
-      <textarea rows='4' cols="10" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
+      <textarea rows='2' cols="10" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
       </div>
-      <div>
+      <div class="e">
       <label for="cost">Price: </label>
       <input name = "cost" type="range" min="1" max="5" value="${obj.price}" class="slider" id="priceRange-${obj.id}">
       </div>
-      <div>
+      <div class="e">
       <label for="reviewSection">Review: </label>
-      <textarea rows='4' cols="10" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
+      <textarea rows='2' cols="30" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
       </div>
-      <div>
-      <button type="button" id="submit-${obj.id}">Submit</button>
+
+      <button type="button" id="submit-${obj.id}" class="submitBtn">Submit</button>
       </div>
             `
         } else if (obj.placeId ===2){
             return `
-            <div>
+            <div class="edit-form">
+            <div  class="e">
       <label for="placeDropdown">Where are you going:</label>
       <select id="placeDropdown-${obj.id}" name="placeDropdown">
         <option value="pleaseSelect"disabled>--Please Select an option--</option>
@@ -79,29 +81,31 @@ const mainDomEntries = {
         <option value="3">France</option>
       </select>
       </div>
-      <div>
+      <div  class="e">
       <label for="location">Any Particular region you're planning on travelling to: </label>
       <input type="text" name="location" id="location-${obj.id}" value="${obj.location}">
       </div>
-      <div>
+      <div  class="e">
       <label for="locationDescription">Location Description: </label>
-      <textarea rows='4' cols="10" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
+      <textarea rows='2' cols="30" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
       </div>
-      <div>
+      <div  class="e">
       <label for="cost">Price: </label>
       <input name = "cost" type="range" min="1" max="5" value="${obj.price}" class="slider" id="priceRange-${obj.id}">
       </div>
-      <div>
+      <div  class="e">
       <label for="reviewSection">Review: </label>
-      <textarea rows='4' cols="10" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
+      <textarea rows='2' cols="30" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
       </div>
-      <div>
-      <button type="button" id="submit-${obj.id}">Submit</button>
+      
+      <button type="button" id="submit-${obj.id}" class="submitBtn">Submit</button>
+     
       </div>
             `
         } else if(obj.placeId===3) {
             return `
-            <div>
+            <div class="edit-form">
+            <div  class="e">
             <label for="placeDropdown">Where are you going:</label>
             <select id="placeDropdown-${obj.id}" name="placeDropdown">
               <option value="pleaseSelect"disabled>--Please Select an option--</option>
@@ -110,24 +114,25 @@ const mainDomEntries = {
               <option value="3" selected="selected" >France</option>
             </select>
             </div>
-            <div>
+            <div  class="e">
             <label for="location">Any Particular region you're planning on travelling to: </label>
             <input type="text" name="location" id="location-${obj.id}" value="${obj.location}">
             </div>
-            <div>
+            <div  class="e">
             <label for="locationDescription">Location Description: </label>
-            <textarea rows='4' cols="10" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
+            <textarea rows='2' cols="30" name="locationDescription" id="locationDescription-${obj.id}">${obj.locationDescription}</textarea>
             </div>
-            <div>
+            <div  class="e">
             <label for="cost">Price: </label>
             <input name = "cost" type="range" min="1" max="5" value="${obj.price}" class="slider" id="priceRange-${obj.id}">
             </div>
-            <div>
+            <div  class="e">
             <label for="reviewSection">Review: </label>
-            <textarea rows='4' cols="10" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
+            <textarea rows='2' cols="30" id="reviewSection-${obj.id}" name="reviewSection">${obj.review}</textarea>
             </div>
-            <div>
-            <button type="button" id="submit-${obj.id}">Submit</button>
+      
+            <button type="button" id="submit-${obj.id}" class="submitBtn">Submit</button>
+
             </div>
             `
         }
