@@ -11,6 +11,11 @@ const htmlFactoryManager = {
             <li id="card-list">${obj.locationDescription}</li>
         </ul>
         <h3>Price: ${obj.price}</h3>
+        <div class="buttons">
+        <button type="button" id="delete-${obj.id}">Delete</button>
+        <button type="button" id="edit-${obj.id}">Edit</button>
+        
+        </div>
 
       </div>
       `;
@@ -28,6 +33,11 @@ const htmlFactoryManager = {
             <ul id="card-list">
             <li>${obj.review}</li>
             </ul>
+            <div class="buttons">
+        <button type="button" id="delete-${obj.id}">Delete</button>
+        <button type="button" id="edit-${obj.id}">Edit</button>
+        
+        </div>
         </div>
         `;
     }

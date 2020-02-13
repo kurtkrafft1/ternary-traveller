@@ -13,5 +13,12 @@ const apiManager = {
             body: JSON.stringify(entry)
         }).then(r => r.json());
       
+    },
+    deleteInterestCard: (id) => {
+        return fetch (`${baseUrl}interests/${id}`, {
+            method: "DELETE"
+            
+        }).then(r=>r.json());
     }
     }
+export default apiManager;
