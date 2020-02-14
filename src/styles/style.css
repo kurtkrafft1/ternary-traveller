@@ -150,6 +150,9 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 6%;
 }
 .e {
     margin: 5%;
@@ -158,6 +161,7 @@ button:hover {
 button.submitBtn {
     padding: 5%;
     align-self: center;
+    margin-bottom: 1%;
     
 }
 
@@ -177,5 +181,8 @@ footer {
     color: grey;
 }
 a:link {
-    color: grey;
+    color: #f4d8cd  ;
+}
+a:visited {
+  color:grey;
 }
